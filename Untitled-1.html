@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exotic Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🌴 Exotic Shop</div>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#products">Produits</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-right">
+            <input type="text" id="search" placeholder="🔎 Rechercher un produit...">
+            <div id="cart-icon" class="cart">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Saveurs Exotiques du Monde</h1>
+        <p>Découvrez nos produits frais et uniques</p>
+        <button>Voir tous les produits</button>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Produits Populaires</h2>
+        <div class="product-grid" id="product-list"></div>
+    </section>
+
+    <!-- Section Contact avec Formulaire -->
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <p>Vous avez une question ? Une suggestion ? Nous sommes à votre écoute !</p>
+        
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nom complet *</label>
+                <input type="text" id="name" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" placeholder="exemple@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Sujet *</label>
+                <input type="text" id="subject" placeholder="Sujet de votre message" required>
+            </div>
+            <div class="form-group full">
+                <label for="message">Votre message *</label>
+                <textarea id="message" rows="6" placeholder="Écrivez votre message ici..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Envoyer le message</button>
+        </form>
+    </section>
+
+    <!-- FOOTER SIMPLIFIÉ : Uniquement Contact + Réseaux -->
+    <footer>
+        <div class="footer-container">
+            <!-- Contact -->
+            <div>
+                <h3>Contact</h3>
+                <p><strong>Email :</strong> contact@exotic.com</p>
+                <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+            </div>
+
+            <!-- Réseaux Sociaux -->
+            <div>
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <p>📸 Instagram</p>
+                    <p>📘 Facebook</p>
+                    <p>🎵 TikTok</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Exotic Shop - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- Modal Panier -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🛒 Mon Panier</h2>
+                <span id="close-modal" class="close">×</span>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="modal-footer">
+                <p>Total : <strong id="cart-total">0 €</strong></p>
+                <button id="checkout-btn">Passer à la caisse</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
